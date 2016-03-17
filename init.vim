@@ -14,6 +14,7 @@ set ignorecase	" Always case-insensitive
 set incsearch	" Searches for strings incrementally
 set breakindent " indent on word wraps
 set clipboard=unnamed " use osx system clipboard
+set list " show (some) whitespace characters 
  
 set autoindent	" Auto-indent new lines
 set expandtab	" Use spaces instead of tabs
