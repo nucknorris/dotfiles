@@ -6,10 +6,10 @@ export ZSH=/Users/snuck/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="ys"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel9kNew/powerlevel9k"
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv docker_host vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
 
 # ZSH_THEME="solarized-powerline"
@@ -60,6 +60,10 @@ plugins=(git extract zsh-syntax-highlighting autojump colorize history-substring
 
 # User configuration
 
+# Base16 Shell
+# BASE16_SHELL="$HOME/.config/base16-shell/base16-material.dark.sh"
+# [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/snuck/Development/repos/DevOps/unix-environment/bin:/Users/snuck/.vimpkg/bini:/Library/TeX/texbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -106,9 +110,11 @@ alias git-push-release="git push origin develop && git push origin master && git
 alias copy="tr -d '\n' | pbcopy"
 alias pwdc="pwd | copy"
 alias o="open"
-alias vim="nvim"
 alias v="vim"
 alias vimconf="vim ~/.config/nvim/init.vim"
+alias ocr='docker run --rm -v `pwd`:/home/docker jbarlow83/ocrmypdf --skip-text'
+alias gsuu='git submodule foreach --recursive git submodule update'
+alias gsii='git submodule foreach --recursive git submodule init'
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
