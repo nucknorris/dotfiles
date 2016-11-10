@@ -33,8 +33,6 @@ set cursorline
 
 " Always show statusline
 set laststatus=2
-" Use 256 colours (Use this setting only if your terminal supports 256 colours)
-set t_Co=256
 
 " Easier split navigations
 nnoremap <C-J> <C-W><C-J>
@@ -65,11 +63,11 @@ Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'altercation/vim-colors-solarized'
 call plug#end()
 
+" Use 256 colours (Use this setting only if your terminal supports 256 colours)
+set t_Co=256
 
 colorscheme solarized
-"colorscheme hybrid_material
 let g:solarized_termcolors=256
-
 
 " vim-airline
 let g:airline_theme = 'solarized'
