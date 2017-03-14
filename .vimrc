@@ -6,16 +6,15 @@ set linebreak   " Break lines at word (requires Wrap lines)
 set showbreak=+++   " Wrap-broken line prefix
 set textwidth=100   " Line wrap (number of cols)
 set showmatch   " Highlight matching brace
-set visualbell  " Use visual bell (no beeping)
- 
+
 set hlsearch    " Highlight all search results
 set smartcase   " Enable smart-case search
 set ignorecase  " Always case-insensitive
 set incsearch   " Searches for strings incrementally
 "set breakindent " indent on word wraps
 set clipboard=unnamed " use osx system clipboard
-set list " show (some) whitespace characters 
- 
+set list " show (some) whitespace characters
+
 set autoindent  " Auto-indent new lines
 set expandtab   " Use spaces instead of tabs
 set shiftwidth=4    " Number of auto-indent spaces
@@ -24,12 +23,12 @@ set smarttab    " Enable smart-tabs
 set softtabstop=4   " Number of spaces per Tab
 
 set ruler       " Show row and column ruler information
- 
+
 set undolevels=1000     " Number of undo levels
 set backspace=indent,eol,start  " Backspace behaviour
 
 " highlight the current line
-set cursorline 
+set cursorline
 
 " Always show statusline
 set laststatus=2
@@ -48,7 +47,7 @@ vnoremap d "_d
 set splitbelow
 set splitright
 
-" Vim Plug 
+" Vim Plug
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible' " adds some basic options
@@ -61,6 +60,7 @@ Plug 'ctrlpvim/ctrlp.vim' " fuzzy search with ctrl-p
 Plug 'mileszs/ack.vim' " symbol search
 Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'altercation/vim-colors-solarized'
+Plug 'niklasl/vim-rdf'
 call plug#end()
 
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
@@ -88,7 +88,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 noremap <F3> :NERDTreeToggle<CR>
 
-" How can I close vim if the only window left open is a NERDTree? 
+" How can I close vim if the only window left open is a NERDTree?
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " tabline
@@ -136,8 +136,4 @@ else
 endif
 
 
-" get off my lawn
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
+
