@@ -61,12 +61,14 @@ Plug 'mileszs/ack.vim' " symbol search
 Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'altercation/vim-colors-solarized'
 Plug 'niklasl/vim-rdf'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
 
-colorscheme solarized
+"colorscheme solarized
+colorscheme gruvbox
 let g:solarized_termcolors=256
 
 " vim-airline

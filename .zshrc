@@ -5,8 +5,8 @@ export ZSH=/Users/snuck/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="ys"
-ZSH_THEME="powerlevel9kNew/powerlevel9k"
+ZSH_THEME="ys"
+#ZSH_THEME="powerlevel9kNew/powerlevel9k"
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
@@ -56,7 +56,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git extract zsh-syntax-highlighting autojump colorize history-substring-search git-extras chucknorris cp docker) 
+plugins=(git extract zsh-syntax-highlighting autojump colorize history-substring-search git-extras chucknorris cp docker osx fzf-zsh)
 
 # User configuration
 
@@ -64,12 +64,15 @@ plugins=(git extract zsh-syntax-highlighting autojump colorize history-substring
 # BASE16_SHELL="$HOME/.config/base16-shell/base16-material.dark.sh"
 # [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/snuck/Development/repos/DevOps/unix-environment/bin:/Users/snuck/.vimpkg/bini:/Library/TeX/texbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/snuck/Development/repos/DevOps/unix-environment/bin:/Users/snuck/.vimpkg/bini:/Library/TeX/texbin:/usr/local/opt/go/libexec/bin:/Users/snuck/.local/go/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
 export TERM="xterm-256color"
+
+# GO
+export GOPATH=/Users/snuck/.local/go
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
